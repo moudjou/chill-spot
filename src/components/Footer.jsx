@@ -1,7 +1,52 @@
-import React from 'react';
-import { Gamepad2 } from 'lucide-react';
+import React, { useState } from 'react';
+
 
 const Footer = () => {
+  const [form, setForm] = useState({
+    email: "",
+  });
+
+  const [error, setError] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value
+    }));
+    
+    if (submitted) {
+      setError({});
+      setSubmitted(false);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+
+    const errors = {};
+    if (!form.email) {
+      errors.email = "Email is required";
+    } else if (!validateEmail(form.email)) {
+      errors.email = "Please enter a valid email address";
+    }
+
+    setError(errors);
+
+    if (Object.keys(errors).length === 0) {
+      console.log("Form submitted", form);
+      
+      setForm({ email: "" });
+      setSubmitted(false);
+    }
+  };
   const partners = [
     'NVIDIA', 'AMD', 'Intel', 'Logitech', 'Razer', 'HyperX'
   ];
@@ -17,7 +62,7 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center items-center gap-8">
             {partners.map((partner) => (
               <span
-              
+               
                 className="text-gray-500 font-semibold text-lg hover:text-[#FFF700] transition-colors cursor-pointer font-mono"
               >
                 {partner}
@@ -32,8 +77,8 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <div>
                 <img 
-                  src="../../public/logo.png" 
-                  className=" " 
+                  src="/logo.png" 
+                  className="w-40" 
                   alt="ChillSpot Logo"
                  />
              </div>
@@ -57,16 +102,21 @@ const Footer = () => {
           <div id="newsletter">
             <h4 className="text-[#FFF700] font-bold mb-4">Newsletter</h4>
             <p className="text-gray-400 mb-4 ">Subscribe to get updates about events and promotions.</p>
-            <div className="flex">
+            <form onSubmit={handleSubmit}>
+                <div className="flex">
               <input
-                type="email"
+                type="email" id='email' name='email' value={form.email} onChange={handleChange}
                 placeholder="Enter your email"
                 className="bg-cyber-darker text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#FFF700] border border-[#FFF700]/20 "
-              />
-              <button className="bg-[#FFF700] text-cyber-black px-4 py-2 rounded-r-lg hover:bg-[#070172] hover:text-[#FFF700] transition-colors font-bold ">
+                />
+                {submitted && error.email && <p className="text-red-500 text-sm">{error.email}</p>}
+              <button  type='submit' className="bg-[#FFF700] text-cyber-black px-4 py-2 rounded-r-lg hover:bg-[#070172] hover:text-[#FFF700] transition-colors font-bold ">
                 Subscribe
-              </button>
-            </div>
+                </button>
+                </div>
+            </form>
+           
+            
           </div>
         </div>
 

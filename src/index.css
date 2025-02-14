@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+:root {
+  --cyber-yellow: #FFF700;
+  --cyber-blue: #070172;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-900;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+::selection {
+  @apply bg-[#FFF700] text-slate-900;
+}
+
+@font-face {
+  font-family: 'titles';
+  src: url('/fonts/titles.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src:url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+.titles {
+  font-family: 'titles', sans-serif;
+}
+
+
+ .par{
+  font-family: "Orbitron",sans-serif;
+}
+
+.text-shadow-glow {
+  text-shadow: 
+    0 0 7px #FFF700,
+    0 0 10px #FFF700,
+    0 0 21px #FFF700,
+    0 0 42px #FFF700,
+    0 0 82px #FFF700,
+    0 0 92px #FFF700,
+    0 0 102px #FFF700,
+    0 0 151px #FFF700;
+}

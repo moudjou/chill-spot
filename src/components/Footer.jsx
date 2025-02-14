@@ -110,7 +110,7 @@ const Footer = () => {
                 className="bg-cyber-darker text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#FFF700] border border-[#FFF700]/20 "
                 />
                 {submitted && error.email && <p className="text-red-500 text-sm">{error.email}</p>}
-              <button  type='submit' className="bg-[#FFF700] text-cyber-black px-4 py-2 rounded-r-lg hover:bg-[#070172] hover:text-[#FFF700] transition-colors font-bold ">
+              <button  type='submit' className="bg-[#FFF700] text-cyber-black px-4 py-2 rounded-r-lg hover:bg-[#4ED0EF] hover:text-[#FFF700] transition-colors font-bold ">
                 Subscribe
                 </button>
                 </div>

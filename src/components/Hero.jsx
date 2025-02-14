@@ -32,7 +32,7 @@ const Hero = () => {
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto ">
           Premium gaming stations, lightning-fast internet, and a vibrant community await you at Chill Spot
         </p>
-        <button onClick={() => scrollToSection('pricing')} className="bg-[#FFF700] text-slate-900 px-8 py-3 rounded-full text-lg hover:bg-[#070172] hover:text-[#FFF700] transition-colors ">
+        <button onClick={() => scrollToSection('pricing')} className="bg-[#FFF700] text-slate-900 px-8 py-3 rounded-full text-lg hover:bg-[#4ED0EF] hover:text-[#FFF700] transition-colors ">
           Start Gaming
         </button>
       </div>

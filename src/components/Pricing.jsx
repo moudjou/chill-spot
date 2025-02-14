@@ -56,7 +56,7 @@ const Pricing = () => {
             <div
              
               className={`relative bg-cyber-darker rounded-2xl p-8 border ${
-                plan.isPopular ? 'border-neon-cyan shadow-lg shadow-neon-cyan/20' : 'border-neon-cyan/20'
+                plan.isPopular ? 'border-neon-cyan shadow-lg shadow-neon-cyan' : 'border-neon-cyan'
               }`}
             >
               {plan.isPopular && (

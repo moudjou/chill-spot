@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         neon: {
-          cyan: '#070172',
+          cyan: '#4ED0EF',
           yellow: '#fff700',
         },
         cyber: {

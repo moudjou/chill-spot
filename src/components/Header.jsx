@@ -39,7 +39,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('pricing')} className="text-white hover:text-[#FFF700] hover:underline transition-colors font-bold ">Pricing</button>
             <button onClick={() => scrollToSection('events')} className="text-white hover:text-[#FFF700] hover:underline transition-colors font-bold ">Events</button>
             <button onClick={() => scrollToSection('contact')} className="text-white hover:text-[#FFF700] hover:underline transition-colors font-bold">Contact</button>
-            <button onClick={() => scrollToSection('newsletter')} className="bg-[#FFF700] text-slate-900 px-6 py-2 rounded-full hover:bg-[#070172] hover:text-[#FFF700] transition-colors font-bold "> Subscribe</button>
+            <button onClick={() => scrollToSection('newsletter')} className="bg-[#FFF700] text-slate-900 px-6 py-2 rounded-full hover:bg-[#4ED0EF] hover:text-[#FFF700] transition-colors font-bold "> Subscribe</button>
           </div>
 
           

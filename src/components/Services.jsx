@@ -37,14 +37,14 @@ const Services = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-cyber-dark rounded-xl p-6 transform hover:-translate-y-2  shadow-lg shadow-neon-cyan/20 transition-all duration-300 border border-neon-cyan/20 hover:border-neon-yellow">
+          {services.map((service) => (
+            <div  className="bg-cyber-dark rounded-xl p-6 transform hover:-translate-y-2  shadow-lg shadow-neon-cyan/20 transition-all duration-300 border border-neon-cyan/20 hover:border-neon-yellow">
               <div className="text-neon-yellow par mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-white par mb-3">{service.title}</h3>
               <p className="text-gray-400 mb-4">{service.description}</p>
               <ul className="space-y-2">
-                {service.specs.map((spec, i) => (
-                  <li key={i} className="text-gray-400 text-sm par flex items-center">
+                {service.specs.map((spec) => (
+                  <li  className="text-gray-400 text-sm par flex items-center">
                     <span className="w-2 h-2 bg-neon-pink rounded-full mr-2"></span>
                     {spec}
                   </li>

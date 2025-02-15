@@ -53,9 +53,8 @@ const Events = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {events.map((event, index) => (
+          {events.map((event) => (
             <div
-              key={index}
               className="bg-cyber-dark rounded-xl p-6 border border-neon-cyan/20 hover:border-neon-yellow transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
